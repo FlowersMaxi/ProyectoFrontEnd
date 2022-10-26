@@ -17,6 +17,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import {HttpClient, HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/LoginComponent';
+import { interceptorProvider } from './service/interceptor-service';
 
 
 @NgModule({
@@ -42,7 +43,9 @@ import { LoginComponent } from './components/login/LoginComponent';
     NgCircleProgressModule.forRoot({}),
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
