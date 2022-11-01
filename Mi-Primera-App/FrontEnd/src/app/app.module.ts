@@ -18,6 +18,9 @@ import {HttpClient, HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/LoginComponent';
 import { interceptorProvider } from './service/interceptor-service';
+import { FormsModule } from '@angular/forms';
+import { NewExperienciaComponent } from './components/experiencia/new-experiencia/new-experiencia.component';
+import { EditExperienciaComponent } from './components/experiencia/edit-experiencia/edit-experiencia.component';
 
 
 @NgModule({
@@ -34,12 +37,15 @@ import { interceptorProvider } from './service/interceptor-service';
     ProyectoComponent,
     FooterComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    NewExperienciaComponent,
+    EditExperienciaComponent
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     NgCircleProgressModule.forRoot({}),
     HttpClientModule
   ],
